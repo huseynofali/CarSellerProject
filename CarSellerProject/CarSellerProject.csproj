@@ -18,7 +18,6 @@
   <ItemGroup>
     <Folder Include="Commands\" />
     <Folder Include="Misc\" />
-    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
