@@ -1,7 +1,8 @@
-﻿using programming009.LibraryManagement.Core.Domain.Entities;
-using programming009.LibraryManagement.Utils;
-using programming009.LibraryManagement.ViewModels;
-
+﻿using CarSellerProject;
+using CarSellerProject.Core.Domain.Entities;
+using CarSellerProject.Utils;
+using CarSellerProject.ViewModels;
+using CarSellerProject.Views;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -61,7 +62,7 @@ namespace programming009.LibraryManagement.Commands.LoginCommands
 
         private void Fail(string username)
         {
-            _loginWindowViewModel.LoginModel = new Models.LoginModel
+            _loginWindowViewModel.LoginModel = new CarSellerProject.Models.LoginModel
             {
                 Password = "",
                 Username = username,

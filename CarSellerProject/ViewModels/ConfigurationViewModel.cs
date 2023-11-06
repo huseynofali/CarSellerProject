@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
+using CarSellerProject.Models;
+using System.Data;
+using programming009.LibraryManagement.Commands.ConfigurationCommands;
 
 namespace CarSellerProject.ViewModels
 {
@@ -25,14 +28,14 @@ namespace CarSellerProject.ViewModels
                 Username = currentSettings.Username,
             };
 
-            SupportedDbTypes = Enum.GetValues(typeof(DatabaseType)).Cast<DatabaseType>().ToList();
+            SupportedDbTypes = Enum.GetValues(typeof(DbType)).Cast<DbType>().ToList();
 
             Save = new SaveCommand(this);
             Cancel = new CancelCommand(this);
         }
 
         public ConfigurationModel Configuration { get; set; }
-        public List<DatabaseType> SupportedDbTypes { get; set; }
+        public List<DbType> SupportedDbTypes { get; set; }
 
         public ICommand Cancel { get; set; }
         public ICommand Save { get; set; }

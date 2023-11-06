@@ -1,4 +1,5 @@
-﻿using CarSellerProject.Views;
+﻿using CarSellerProject.Commands.AdminWindowCommands;
+using CarSellerProject.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +14,12 @@ namespace CarSellerProject.ViewModels
     {
         public AdminWindowViewModel(AdminWindow window) : base(window)
         {
-            OpenBranches = new OpenBranchesCommand(this);
-            OpenAuthors = new OpenAuthorsCommand(this);
-            OpenBooks = new OpenBooksCommand(this);
+            OpenCars = new OpenCarsCommand(this);
+            OpenCarGalleries = new OpenCarGalleriesCommand(this);
         }
 
-        public ICommand OpenBranches { get; set; }
-        public ICommand OpenAuthors { get; set; }
-        public ICommand OpenBooks { get; set; }
+        public ICommand OpenCars { get; set; }
+        public ICommand OpenCarGalleries { get; set; }
         public Grid CenterGrid { get; set; }
     }
 }

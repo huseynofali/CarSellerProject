@@ -1,4 +1,10 @@
-﻿using CarSellerProject.ViewModels.Abstract;
+﻿using CarGallerySellerProject.Commands.CarGalleryGalleryCommands;
+using CarSellerProject.Commands.CarGalleryCommands;
+using CarSellerProject.Core.Domain.Entities;
+using CarSellerProject.Misc;
+using CarSellerProject.Misc.Abstract;
+using CarSellerProject.Models;
+using CarSellerProject.ViewModels.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,39 +19,40 @@ namespace CarSellerProject.ViewModels
     {
         public CarGalleriesViewModel()
         {
-            IExporter<BookModel> exporter = new CsvExporter<BookModel>();
+            IExporter<CarGalleryModel> exporter = new CsvExporter<CarGalleryModel>();
 
-            OpenAddBook = new OpenSaveBookCommand(this);
-            OpenUpdateBook = new OpenSaveBookCommand(this).SetAsUpdate();
-            OpenDeleteBook = new OpenDeleteBookCommand(this);
-            ExportBooks = new ExportBooksCommand(this, exporter);
+            OpenAddCarGallery = new OpenSaveCarGalleryCommand(this);
+            OpenUpdateCarGallery = new OpenSaveCarGalleryCommand(this).SetAsUpdate();
+            OpenDeleteCarGallery = new OpenDeleteCarGalleryCommand(this);
+            ExportCarGalleries = new ExportCarGalleriesCommand(this, exporter);
         }
 
-        public ObservableCollection<BookModel> BookModels { get; set; }
-        public ICommand OpenAddBook { get; set; }
-        public ICommand OpenUpdateBook { get; set; }
-        public ICommand OpenDeleteBook { get; set; }
-        public ICommand ExportBooks { get; set; }
-        public int SelectedBookIndex { get; set; }
+        public ObservableCollection<CarGalleryModel> CarGalleryModels { get; set; }
+        public ICommand OpenAddCarGallery { get; set; }
+        public ICommand OpenUpdateCarGallery { get; set; }
+        public ICommand OpenDeleteCarGallery { get; set; }
+        public ICommand ExportCarGalleries { get; set; }
+        public int SelectedCarGalleryIndex { get; set; }
 
         public void Load()
         {
-            BookModels = new ObservableCollection<BookModel>();
+            CarGalleryModels = new ObservableCollection<CarGalleryModel>();
 
-            List<Book> books = ApplicationContext.DB.BookRepository.Get();
+            List<CarGallery> carGallerys = ApplicationContext.DB.CarGalleryRepository.Get();
 
-            foreach (Book book in books)
+            foreach (CarGallery carGallery in carGallerys)
             {
-                BookModel model = new BookModel()
+                CarGalleryModel model = new CarGalleryModel()
                 {
-                    Id = book.Id,
-                    Name = book.Name,
-                    Genre = book.Genre,
-                    Price = book.Price,
+                    Id = carGallery.Id,
+                    Name = carGallery.Name,
+                    Location = carGallery.Location,
+                    ContactEmail = carGallery.ContactEmail,
+                    ContactPhone = carGallery.ContactPhone
                 };
 
-                BookModels.Add(model);
+                CarGalleryModels.Add(model);
             }
-        }
+    }
     }
 }

@@ -13,7 +13,7 @@ namespace CarSellerProject.Core.Domain.Repositories
         void Update(Car car);
         void Delete(int id);
         Car Get(int id);
-        List<Car> GetAll();
+        List<Car> Get();
 
     }
 }

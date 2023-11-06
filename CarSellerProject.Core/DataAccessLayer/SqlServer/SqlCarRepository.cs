@@ -64,7 +64,7 @@ namespace CarSellerProject.Core.DataAccessLayer.SqlServer
             cmd.Parameters.AddWithValue("@mileage", car.Mileage);
             cmd.Parameters.AddWithValue("@color", car.Color);
             cmd.Parameters.AddWithValue("@galleryID", car.GalleryID);
-            cmd.Parameters.AddWithValue("@carID", car.CarID);
+            cmd.Parameters.AddWithValue("@carID", car.Id);
 
             cmd.ExecuteNonQuery();
         }
@@ -86,7 +86,7 @@ namespace CarSellerProject.Core.DataAccessLayer.SqlServer
             return null;
         }
 
-        public List<Car> GetAll()
+        public List<Car> Get()
         {
             List<Car> cars = new List<Car>();
 

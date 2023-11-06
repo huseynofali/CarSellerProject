@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarSellerProject.Models
 {
-    internal class ReportFieldAttribute
+    public class ReportFieldAttribute : Attribute
     {
+        public string DisplayName { get; set; }
+        public int Order { get; set; }
     }
 }

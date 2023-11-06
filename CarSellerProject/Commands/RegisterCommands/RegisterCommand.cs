@@ -1,7 +1,8 @@
-﻿using programming009.LibraryManagement.Core.Domain.Entities;
-using programming009.LibraryManagement.Utils;
-using programming009.LibraryManagement.ViewModels;
-using programming009.LibraryManagement.Views;
+﻿using CarSellerProject;
+using CarSellerProject.Core.Domain.Entities;
+using CarSellerProject.Utils;
+using CarSellerProject.ViewModels;
+using CarSellerProject.Views;
 
 using System;
 using System.Collections.Generic;

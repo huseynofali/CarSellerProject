@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CarSellerProject.Misc.Abstract
 {
-    internal interface IExporter
+    public interface IExporter<T>
     {
+        void Export(IEnumerable<T> objects);
     }
 }

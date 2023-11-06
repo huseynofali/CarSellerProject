@@ -54,7 +54,7 @@ namespace CarSellerProject.Core.DataAccessLayer.SqlServer
 
             const string query = "UPDATE CarGalleries SET Name = @name, Location = @location, ContactEmail = @contactEmail, ContactPhone = @contactPhone WHERE GalleryID = @id;";
             SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("id", carGallery.GalleryID);
+            cmd.Parameters.AddWithValue("id", carGallery.Id);
             cmd.Parameters.AddWithValue("name", carGallery.Name);
             cmd.Parameters.AddWithValue("location", carGallery.Location);
             cmd.Parameters.AddWithValue("contactEmail", carGallery.ContactEmail);

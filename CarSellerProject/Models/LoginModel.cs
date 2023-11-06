@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarSellerProject.Models
 {
-    internal class LoginModel
+    public class LoginModel
     {
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

@@ -5,20 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
+using CarSellerProject.Models;
+using CarSellerProject.Commands.CarGalleryCommands;
+using CarGallerySellerProject.Commands.CarGalleryGalleryCommands;
 
 namespace CarSellerProject.ViewModels
 {
     public class SaveCarGalleryWindowViewModel:BaseWindowViewModel
     {
-        public SaveAuthorWindowViewModel(Window window, AuthorsViewModel parent) : base(window)
+        public SaveCarGalleryWindowViewModel(Window window, CarGalleriesViewModel parent) : base(window)
         {
-            this.AuthorModel = new AuthorModel();
+            this.CarGalleryModel = new CarGalleryModel();
             this.Parent = parent;
-            this.SaveAuthor = new SaveAuthorCommand(this);
+            this.SaveCarGallery = new SaveCarGalleryCommand(this);
         }
 
-        public AuthorModel AuthorModel { get; set; }
-        public ICommand SaveAuthor { get; set; }
-        public AuthorsViewModel Parent { get; set; }
+        public CarGalleryModel CarGalleryModel { get; set; }
+        public ICommand SaveCarGallery { get; set; }
+        public CarGalleriesViewModel Parent { get; set; }
     }
 }

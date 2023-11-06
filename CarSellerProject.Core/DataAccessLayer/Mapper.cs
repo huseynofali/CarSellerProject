@@ -16,7 +16,7 @@ namespace CarSellerProject.Core.DataAccessLayer
             return new CarGallery
             {
                 Name = Convert.ToString(reader["Name"]),
-                GalleryID = Convert.ToInt32(reader["GalleryID"]),
+                Id = Convert.ToInt32(reader["GalleryID"]),
                 ContactEmail = Convert.ToString(reader["ContactEmail"]),
                 ContactPhone = Convert.ToString(reader["ContactPhone"])
             };
@@ -25,7 +25,7 @@ namespace CarSellerProject.Core.DataAccessLayer
         {
             Car car = new Car
             {
-                CarID = Convert.ToInt32(reader["CarID"]),
+                Id = Convert.ToInt32(reader["CarID"]),
                 Make = Convert.ToString(reader["Make"]),
                 Model = Convert.ToString(reader["Model"]),
                 Year = Convert.ToInt32(reader["Year"]),

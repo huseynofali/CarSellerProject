@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarSellerProject.Models
 {
-    internal class RegisterModel
+    public class RegisterModel
     {
+        public string Username { get; set; }
+        public string Email { get; set; }
     }
 }

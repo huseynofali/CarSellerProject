@@ -1,7 +1,8 @@
-﻿using programming009.LibraryManagement.Models;
-using programming009.LibraryManagement.Settings;
-using programming009.LibraryManagement.ViewModels;
-using programming009.LibraryManagement.Views;
+﻿using CarSellerProject;
+using CarSellerProject.Models;
+using CarSellerProject.Settings;
+using CarSellerProject.ViewModels;
+using CarSellerProject.Views;
 
 using System;
 using System.Windows.Controls;
