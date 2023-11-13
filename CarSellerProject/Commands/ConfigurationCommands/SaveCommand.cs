@@ -8,7 +8,7 @@ using System;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace programming009.LibraryManagement.Commands.ConfigurationCommands
+namespace CarSellerProject.Commands.ConfigurationCommands
 {
     public class SaveCommand : ICommand
     {

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarSellerProject.Views"
         mc:Ignorable="d"
-        Title="SaveCarGalleryWindow"  Height="300" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="SaveCarGalleryWindow"  Height="500" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -23,13 +23,19 @@
         <ScrollViewer Grid.Row="1" Grid.Column="1">
             <StackPanel >
                 <Label Content="Name:" Margin="10,10,0,0"></Label>
-                <TextBox Margin="10" Text="{Binding BranchModel.Name}"></TextBox>
+                <TextBox Margin="10" Text="{Binding CarGalleryModel.Name}"></TextBox>
 
-                <Label Content="Address:" Margin="10,0,0,0"></Label>
-                <TextBox Margin="10" Text="{Binding BranchModel.Address}"></TextBox>
+                <Label Content="Location:" Margin="10,0,0,0"></Label>
+                <TextBox Margin="10" Text="{Binding CarGalleryModel.Location}"></TextBox>
+
+                <Label Content="Contact Email:" Margin="10,0,0,0"></Label>
+                <TextBox Margin="10" Text="{Binding CarGalleryModel.ContactEmail}"></TextBox>
+
+                <Label Content="Contact Phone:" Margin="10,0,0,0"></Label>
+                <TextBox Margin="10" Text="{Binding CarGalleryModel.ContactPhone}"></TextBox>
 
                 <Border Margin="10" >
-                    <Button Content="Save" Command="{Binding SaveBranch}" Style="{StaticResource btnAdd}">
+                    <Button Content="Save" Command="{Binding SaveCarGallery}" Style="{StaticResource btnAdd}">
                     </Button>
                 </Border>
             </StackPanel>

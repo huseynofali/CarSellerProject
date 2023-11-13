@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace programming009.LibraryManagement.Commands.LoginCommands
+namespace CarSellerProject.Commands.LoginCommands
 {
     public class OpenRegisterCommand : ICommand
     {

@@ -14,21 +14,26 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <WrapPanel  Height="60" HorizontalAlignment="Right">
-                <Button Content="Add" Command="{Binding OpenAddBranch}" FontSize="25" Height="60" Width="180" Style="{StaticResource btnGreen}" Margin="15 0 15 0" VerticalAlignment="Center"/>
-                <Button Content="Update" Command="{Binding OpenUpdateBranch}" FontSize="25" Height="60" Width="180" Style="{StaticResource btnGreen}" Margin="15 0 15 0" VerticalAlignment="Center"/>
-                <Button Content="Delete" Command="{Binding OpenDeleteBranch}" FontSize="25" Height="60" Width="180" Style="{StaticResource btnGreen}" Margin="15 0 15 0" VerticalAlignment="Center"/>
+                <Button Content="Add" Command="{Binding OpenAddCar}" FontSize="25" Height="60" Width="180" Style="{StaticResource btnGreen}" Margin="15 0 15 0" VerticalAlignment="Center"/>
+                <Button Content="Update" Command="{Binding OpenUpdateCar}" FontSize="25" Height="60" Width="180" Style="{StaticResource btnGreen}" Margin="15 0 15 0" VerticalAlignment="Center"/>
+                <Button Content="Delete" Command="{Binding OpenDeleteCar}" FontSize="25" Height="60" Width="180" Style="{StaticResource btnGreen}" Margin="15 0 15 0" VerticalAlignment="Center"/>
             </WrapPanel>
             <Line Stretch="Fill" Stroke="Black" X2="1" VerticalAlignment="Bottom" Margin="0 20 0 0"/>
         </StackPanel>
 
         <ScrollViewer Grid.Row="2" Visibility="Visible">
-            <ListView x:Name="MainList" ItemsSource="{Binding BranchModels}"
-                        Style="{StaticResource listViewCustom}" SelectedIndex="{Binding SelectedBranchIndex}">
+            <ListView x:Name="MainList" ItemsSource="{Binding CarModels}"
+                        Style="{StaticResource listViewCustom}" SelectedIndex="{Binding SelectedCarIndex}">
                 <ListView.View>
                     <GridView >
                         <GridViewColumn  DisplayMemberBinding="{Binding Id}"  Header="Id" Width="auto"/>
-                        <GridViewColumn  DisplayMemberBinding="{Binding Name}" Header="Name" Width="auto"/>
-                        <GridViewColumn  DisplayMemberBinding="{Binding Address}" Header="Address" Width="auto"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Make}" Header="Make" Width="auto"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Model}" Header="Model" Width="auto"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Year}" Header="Year" Width="auto"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Price}" Header="Price" Width="auto"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Mileage}" Header="Mileage" Width="auto"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Color}" Header="Color" Width="auto"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding GalleryName}" Header="Gallery Name" Width="auto"/>
                     </GridView>
                 </ListView.View>
             </ListView>

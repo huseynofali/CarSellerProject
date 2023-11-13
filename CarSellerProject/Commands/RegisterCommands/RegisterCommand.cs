@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace programming009.LibraryManagement.Commands.RegisterCommands
+namespace CarSellerProject.Commands.RegisterCommands
 {
     public class RegisterCommand : ICommand
     {

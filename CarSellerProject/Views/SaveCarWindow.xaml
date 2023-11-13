@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarSellerProject.Views"
         mc:Ignorable="d"
-        Title="SaveCarWindow" Height="700" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="SaveCarWindow" Height="800" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -16,40 +16,36 @@
 
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="15*"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="1" Grid.Column="1" >
-            <Label Content="Name:" Margin="10,10,0,0"></Label>
-            <TextBox Margin="10" Text="{Binding BookModel.Name}"></TextBox>
+            <Label Content="Make:" Margin="10,10,0,0"></Label>
+            <TextBox Margin="10" Text="{Binding CarModel.Make}"></TextBox>
+
+            <Label Content="Model:" Margin="10,0,0,0"></Label>
+            <TextBox Margin="10" Text="{Binding CarModel.Model}"></TextBox>
+
+            <Label Content="Year:" Margin="10,0,0,0"></Label>
+            <TextBox Margin="10" Text="{Binding CarModel.Year}"></TextBox>
 
             <Label Content="Price:" Margin="10,0,0,0"></Label>
-            <TextBox Margin="10" Text="{Binding BookModel.Price}"></TextBox>
+            <TextBox Margin="10" Text="{Binding CarModel.Price}"></TextBox>
 
-            <Label Content="Genre:" Margin="10,0,0,0"></Label>
-            <ComboBox Margin="10" ItemsSource="{Binding Genres}" SelectedValue="{Binding BookModel.Genre}"></ComboBox>
+            <Label Content="Mileage:" Margin="10,0,0,0"></Label>
+            <TextBox Margin="10" Text="{Binding CarModel.Mileage}"></TextBox>
 
-            <Label Content="Author list:" Margin="10,10,0,0"></Label>
-            <ComboBox Margin="10" ItemsSource="{Binding Authors}" SelectedItem="{Binding SelectedAuthorToAdd}">
-            </ComboBox>
+            <Label Content="Color:" Margin="10,0,0,0"></Label>
+            <TextBox Margin="10" Text="{Binding CarModel.Color}"></TextBox>
 
-            <Border Margin="0" >
-                <Button Content="Move Down" Command="{Binding AddAuthorToList}">
-                </Button>
-            </Border>
-            <Border Margin="0" >
-                <Button Content="Move Up" Command="{Binding DeleteAuthorFromList}">
-                </Button>
-            </Border>
 
-            <Label Content="Selected Authors:" Margin="10,10,0,0"></Label>
-            <ListBox Margin="10"  ItemsSource="{Binding SelectedAuthors}" SelectedItem="{Binding SelectedAuthorToDelete}">
-            </ListBox>
+            <Label Content="Car Gallery Id:" Margin="10,0,0,0"></Label>
+            <TextBox Margin="10" Text="{Binding CarModel.GalleryID}"></TextBox>
 
 
             <Border Margin="10,10,10,10" >
-                <Button Content="Save" Command="{Binding SaveBook}" Style="{StaticResource btnAdd}">
+                <Button Content="Save" Command="{Binding SaveCar}" Style="{StaticResource btnAdd}">
                 </Button>
             </Border>
         </StackPanel>
